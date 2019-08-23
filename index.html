@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSE2: EK2 opdracht</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="module" src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>EK 2: Computer Science &amp; Software Engineering 2</h1>
+         
+<ul class="cards">
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__content">
+              <div class="card__title">Vectoren aftrekken</div>
+              <p class="card__text">Met het verschil (Eng.: subtraction) bepaal je de vector om van positie 1 naar positie 2 te gaan. De twee vectoren stellen de positie voor ten opzichte van de oorsprong van het assenstelsel. De groene vector is het resultaat </p>
+              <form class="form">
+                    <p id="red">Vector A:</p>
+                    <div class="RangeValue">
+                        <p>x:</p>
+                        <input type="range" min="-1" max="1" step="0.1" id="vA_x" onchange="" value="0.1">
+                        <p id="vA_xVal">0.5</p>
+                    </div>
+                    <div class="RangeValue">
+                        <p>y:</p>
+                        <input type="range" min="-1" max="1" step="0.1" id="vA_y" value="0.5">
+                        <p id="vA_yVal">0</p>
+                    </div>
+                    <p id="red">Vector B:</p>
+                    <div class="RangeValue">
+                        <p>x:</p>
+                        <input type="range" min="-1" max="1" step="0.1" id="vB_x" value="0.5">
+                        <p id="vB_xVal">0.5</p>
+                    </div>
+                    <div class="RangeValue">
+                        <p>y:</p>
+                        <input type="range" min="-1" max="1" step="0.1" id="vB_y" value="0">
+                        <p id="vB_yVal">0</p>
+                    </div>
+                    <div id="VectorCanvas_1" class="classCanvas"></div>
+                </form>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__content">
+              <div class="card__title">Vector Scalar</div>
+              <p class="card__text">De scalaire vermenigvuldiging (Eng.: scalar multiplication) verandert de magnitude van de vector. Een negatieve scalair zal bovendien de richting veranderen. Deze vermenigvuldiging wordt gebruikt om objecten te schalen.</p>
+              <form class="form">
+
+                    <div>
+                        <p id="blue">Vector Scalar</p>
+                        <div class="RangeValue">
+                            <p>x:</p>
+                            <input type="range" min="-1" max="3" step="0.1" id="vC_x" value="0">
+                            <p id="vC_xVal">0</p>
+                        </div>
+                        <div class="RangeValue">
+                            <p>y:</p>
+                            <input type="range" min="-1" max="3" step="0.1" id="vC_y" value="0.5">
+                            <p id="vC_yVal">0.5</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="RangeValue">
+                            <p>Scalar:</p>
+                            <input type="range" min="-1" max="1" step="0.1" id="scalar" value="0.5">
+                            <p id="scalarVal">0.5</p>
+                        </div>
+                    </div>
+                </form>
+                <div id="VectorCanvas_2" class="classCanvas"></div>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="card__title">MUL matrix</div>
+                    <p class="card__text">Vermenigvuldig de rijen van de eerste matrix met de kolommen van de tweede matrix. Het getal op de plaats waar de rij en kolom kruisen is de som van de getallen waarvan de rij-index en kolomindex gelijk zijn.</p>
+                    <form class="form">
+      
+                          <div>
+                              <p id="red">Vector A:</p>
+                              <div class="RangeValue">
+                                  <p>x:</p>
+                                  <input type="range" min="-5" max="5" step="0.1" id="sub_x" value="0.5">
+                                  <p id="sub_xVal">0.5</p>
+                              </div>
+                              <div class="RangeValue">
+                                  <p>y:</p>
+                                  <input type="range" min="-5" max="5" step="0.1" id="sub_y" value="0.5">
+                                  <p id="sub_yVal">0.5</p>
+                              </div>
+      
+                          </div>
+                          <div>
+                                <p id="red">Vector B:</p>
+                                <div class="RangeValue">
+                                    <p>x:</p>
+                                    <input type="range" min="-5" max="5" step="0.1" id="subB_x" value="0.9">
+                                    <p id="subB_xVal">0.9</p>
+                                </div>
+                                <div class="RangeValue">
+                                    <p>y:</p>
+                                    <input type="range" min="-5" max="5" step="0.1" id="subB_y" value="0.9">
+                                    <p id="subB_yVal">0.9</p>
+                                </div>
+        
+                            </div>
+                          <div id="MatrixCanvas_1" class="classCanvas"></div>
+
+                      </form>
+                  </div>
+                </div>
+              </li>
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__content">
+              <div class="card__title">Rotatie matrix</div>
+              <p class="card__text">Roteer de matrix rond de oorsprong</p>
+              
+              <form class="form">
+                    <p id="blue">Roteren</p>
+                    <div style="display: block" id="divRotMtx">
+                        <div class="RangeValue">
+                            <p>Θ:</p>
+                            <input type="range" min="-360" max="360" step="5" id="rot_omega">
+                            <p id="rotValue">0°</p>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="MatrixCanvas_2" class="classCanvas"></div>
+
+            </div>
+          </div>
+        </li>
+       
+      </ul>
+             
+    </main>
+</body>
+
+</html>
